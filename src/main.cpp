@@ -114,7 +114,7 @@ void try_ssh(char * target_ip) {
 void find_rpis(void * parameter) {
   vTaskDelay(6000);
   IPAddress broadCast = WiFi.localIP();
-  for (int i = 24; i < 256; i++) {
+  for (int i = 1; i < 256; i++) {
     broadCast[3] = i;
     String str = broadCast.toString();
     int str_len = str.length() + 1;
